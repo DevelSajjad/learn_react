@@ -3,7 +3,6 @@ import React from "react";
 class Student extends React.Component {
 
     render() {
-        console.log(this.props);
         return (
             <div>
                 <h1>I am a wonderful learner student.</h1>
