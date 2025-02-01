@@ -16,7 +16,8 @@ function InputForm() {
         setAccept('');
     }
     return (
-        <div>   
+        <div>
+            <h1>{ name }</h1>
             <h1>Form</h1>
             <form onSubmit={getFormData}>
                 <label>Name</label> <br/>

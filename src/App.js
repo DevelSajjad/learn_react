@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import UseEffect from './UseEffect';
 
 function App() {
   const [data, inputData] = useState(null);
@@ -12,11 +13,13 @@ function App() {
 
   return (
     <div className="App">
-      <h1>First React App</h1>
+      {/* <h1>First React App</h1> */}
 
-      <p>{print ? data : null}</p>
+      {/* <p>{print ? data : null}</p>
       <input onChange={getData}/>
-      <button onClick={()=>printData(print ? false : true)}>Print</button>
+      <button onClick={()=>printData(print ? false : true)}>Print</button> */}
+
+      <UseEffect/>
     </div>
   );
 }
