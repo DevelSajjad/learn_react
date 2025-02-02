@@ -1,5 +1,5 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import { Tab, Table } from "react-bootstrap";
 function ArrayList()
 {

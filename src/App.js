@@ -1,8 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 import UseEffect from './UseEffect';
 import ArrayList from './ArrayList';
+import NestedArray from './NestedArray';
 
 function App() {
   const [data, inputData] = useState(null);
@@ -24,7 +26,9 @@ function App() {
 
       
       
-      <ArrayList/>
+      {/* <ArrayList/> */}
+
+      <NestedArray/>
 
     </div>
   );
