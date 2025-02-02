@@ -59,7 +59,6 @@ function UseEffect() {
                 <p>{errorEmail}</p>
                 <br></br>
                 <button type="submit">Submit</button>
-
             </form>
         </div>
     );

@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import UseEffect from './UseEffect';
+import ArrayList from './ArrayList';
 
 function App() {
   const [data, inputData] = useState(null);
@@ -19,7 +20,12 @@ function App() {
       <input onChange={getData}/>
       <button onClick={()=>printData(print ? false : true)}>Print</button> */}
 
-      <UseEffect/>
+      {/* <UseEffect/> */}
+
+      
+      
+      <ArrayList/>
+
     </div>
   );
 }
