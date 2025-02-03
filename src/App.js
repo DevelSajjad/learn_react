@@ -6,53 +6,55 @@ import UseEffect from './UseEffect';
 import ArrayList from './ArrayList';
 import NestedArray from './NestedArray';
 import PureComponent from './PureComponent';
+import UseMemo from './UseMemo';
 
-// function App() {
-//   const [data, inputData] = useState(null);
-//   const [print, printData] = useState(false);
-//   function getData(data) {
-//     let val = data.target.value;
-//     inputData(val);
-//   }
+function App() {
+  const [data, inputData] = useState(null);
+  const [print, printData] = useState(false);
+  function getData(data) {
+    let val = data.target.value;
+    inputData(val);
+  }
 
-//   return (
-//     <div className="App">
-//       <h1>First React App</h1>
+  return (
+    <div className="App">
+      {/* <h1>First React App</h1>
 
-//       <p>{print ? data : null}</p>
-//       <input onChange={getData}/>
-//       <button onClick={()=>printData(print ? false : true)}>Print</button>
+      <p>{print ? data : null}</p>
+      <input onChange={getData}/>
+      <button onClick={()=>printData(print ? false : true)}>Print</button>
 
-//       <UseEffect/>
+      <UseEffect/>
 
       
       
-//       <ArrayList/>
+      <ArrayList/>
 
-//       <NestedArray/>
+      <NestedArray/> */}
 
-//     </div>
-//   );
-// }
-
-// export default App;
-
-class App extends Component {
-  constructor() {
-    super();
-    this.state= {
-      count:1,
-    }
-  }
-  render() {
-    return(
-      <div className='App'>
-        <PureComponent data={this.state.count} />
-        <button onClick={()=>this.setState({count: 1})}>Increment Count</button>
-      </div>
-    );
-  }
+      <UseMemo></UseMemo>
+    </div>
+  );
 }
 
 export default App;
+
+// class App extends Component {
+//   constructor() {
+//     super();
+//     this.state= {
+//       count:1,
+//     }
+//   }
+//   render() {
+//     return(
+//       <div className='App'>
+//         <PureComponent data={this.state.count} />
+//         <button onClick={()=>this.setState({count: 1})}>Increment Count</button>
+//       </div>
+//     );
+//   }
+// }
+
+// export default App;
 
