@@ -8,6 +8,7 @@ import NestedArray from './NestedArray';
 import PureComponent from './PureComponent';
 import UseMemo from './UseMemo';
 import UseRef from './UseRef';
+import ControlComponent from './ControlComponent';
 
 function App() {
   const [data, inputData] = useState(null);
@@ -35,7 +36,9 @@ function App() {
 
       {/* <UseMemo></UseMemo> */}
 
-      <UseRef/>
+      {/* <UseRef/> */}
+
+      <ControlComponent/>
     </div>
   );
 }
