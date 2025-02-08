@@ -9,6 +9,11 @@ import PureComponent from './PureComponent';
 import UseMemo from './UseMemo';
 import UseRef from './UseRef';
 import ControlComponent from './ControlComponent';
+import { BrowserRouter, Link, Route, Routes } from 'react-router';
+import Home from './component/Home';
+import About from './component/About';
+import NavvBar from './component/NavvBar'
+import Filter from './component/Filter';
 
 
 function App() {
@@ -17,6 +22,11 @@ function App() {
   function getData(data) {
     let val = data.target.value;
     inputData(val);
+  }
+
+  function para()
+  {
+    console.log('a');
   }
 
   return (
@@ -40,27 +50,20 @@ function App() {
       {/* <UseRef/> */}
 
       {/* <ControlComponent/> */}
-
-      <Hoc count={Counter} />
-
-      <HocGreen count={Counter} />
+      
+      <BrowserRouter>
+      <NavvBar/>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/about/:company_name" element={<About/>} />
+          <Route path="/filter/:category_name" element={<Filter/>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
 
-function Hoc(props) {
-  return <h1> <props.count/> </h1>
-}
-function HocGreen(props) {
-  return <h1 style={{ backgroundColor:'green', width:300}} > <props.count/> </h1>
-}
-function Counter() {
-  const [incre, setIncre] = useState(1);
-  return <div>
-    <h1> {incre} </h1>
-    <button onClick={()=>setIncre(incre + 1)} >Increment</button>
-  </div>
-}
+
 
 export default App;
 
