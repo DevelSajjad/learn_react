@@ -5,6 +5,7 @@ const initialState = {
 }
 
 export default function CartItems(state = initialState, action) {
+    console.log('reducer' ,action);
     switch (action.type) {
         case Add_To_Cart:
             return {
